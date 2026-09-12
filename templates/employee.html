@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Home — TinyCorp</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f4f5f7; display: flex;
+           align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    .card { background: #fff; padding: 2.5rem; border-radius: 10px; width: 360px;
+             box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    h1 { font-size: 1.1rem; color: #1a1a2e; }
+    p { color: #666; font-size: 0.9rem; }
+    a { color: #3b5bfd; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hi {{ username }}, welcome back.</h1>
+    <p>Nothing interesting here — regular employees don't have anything worth
+      looking at. Maybe the admin dashboard has something?</p>
+    <p><a href="/logout">Log out</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard — TinyCorp</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #10131a; color: #e8e8f0;
+           display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    .card { background: #1b1f2a; padding: 2.5rem; border-radius: 10px; width: 420px;
+             box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+    h1 { font-size: 1.1rem; color: #8fd694; margin: 0 0 1rem; }
+    .flag { font-family: monospace; background: #0d0f14; padding: 0.9rem; border-radius: 6px;
+            font-size: 1rem; color: #f2c94c; word-break: break-all; }
+    a { color: #6b8bff; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Welcome, admin. You're in the internal dashboard.</h1>
+    <div class="flag">{{ flag }}</div>
+    <p><a href="/logout">Log out</a></p>
+  </div>
+</body>
+</html>

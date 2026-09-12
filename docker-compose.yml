@@ -1,0 +1,9 @@
+services:
+  tinycorp:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - CTF_FLAG=FLAG{s1ngl3_qu0t3_5t0ps_th3_qu3ry}
+      - FLASK_SECRET=change-me-per-deployment
+    restart: unless-stopped

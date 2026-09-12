@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TinyCorp Employee Portal</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #f4f5f7; display: flex;
+           align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    .card { background: #fff; padding: 2.5rem; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+             width: 320px; }
+    h1 { font-size: 1.25rem; margin: 0 0 1.25rem; color: #1a1a2e; }
+    label { display: block; font-size: 0.85rem; color: #555; margin-bottom: 0.25rem; }
+    input { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc;
+            border-radius: 6px; box-sizing: border-box; }
+    button { width: 100%; padding: 0.6rem; background: #3b5bfd; color: #fff; border: none;
+             border-radius: 6px; font-weight: 600; cursor: pointer; }
+    .error { color: #c0392b; font-size: 0.85rem; margin-bottom: 1rem; }
+    .footer { margin-top: 1rem; font-size: 0.75rem; color: #999; }
+  </style>
+  <!-- TODO(dev): sanitize input in app.py before this ever sees prod -->
+</head>
+<body>
+  <div class="card">
+    <h1>TinyCorp Employee Portal</h1>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+    <form method="POST" action="/login">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="off" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Sign in</button>
+    </form>
+    <div class="footer">Forgot your password? Ask IT. Don't have an account?
+      Ask your manager. Are you the admin? You already know what to do.</div>
+  </div>
+</body>
+</html>
